@@ -158,13 +158,6 @@ skill_toolset = SkillToolset(
 #   - support.google.com/chromebook/* (Chromebook support articles)
 kb_search_tool = VertexAiSearchTool(
     data_store_id="projects/mygenerativeai/locations/global/collections/default_collection/dataStores/chrome-enterprise-kb",
-    description=(
-        "Search the Chrome Enterprise knowledge base for answers to questions "
-        "about Chrome Browser management, ChromeOS device administration, "
-        "enrollment procedures, policy documentation, extension management, "
-        "and troubleshooting. Use this when you need up-to-date documentation "
-        "or detailed how-to guides beyond what the inline skills provide."
-    ),
 )
 
 
