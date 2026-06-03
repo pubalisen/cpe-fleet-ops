@@ -1,91 +1,362 @@
 {
   "eval_set_id": "routing_accuracy",
   "name": "Routing Accuracy Evaluations",
+  "description": null,
   "eval_cases": [
     {
       "eval_id": "routes_to_support_intake",
       "conversation": [
         {
+          "invocation_id": "",
           "user_content": {
-            "parts": [{"text": "Chrome extensions stopped loading on all devices in the Marketing OU after yesterday's update. About 30 users are affected."}]
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Chrome extensions stopped loading on all devices in the Marketing OU after yesterday's update. About 30 users are affected.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
           },
-          "expected_agent_response": {
-            "parts": [{"text": "I'll route this to the Support Intake workflow. This is an EXTENSION issue at P2 priority (team-wide, 30 users). Running Triage → Diagnose → Resolve."}]
-          }
+          "final_response": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I'll route this to the Support Intake workflow. This is an EXTENSION issue at P2 priority (team-wide, 30 users). Running Triage, Diagnose, Resolve.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": null,
+          "creation_timestamp": 0.0,
+          "rubrics": null,
+          "app_details": null
         }
       ],
-      "creation_timestamp": 1780460010.0
+      "conversation_scenario": null,
+      "session_input": null,
+      "creation_timestamp": 1780473384.880516,
+      "rubrics": null,
+      "final_session_state": {}
     },
     {
       "eval_id": "routes_to_policy_automation",
       "conversation": [
         {
+          "invocation_id": "",
           "user_content": {
-            "parts": [{"text": "Enable Safe Browsing Enhanced Protection for the entire organization and disable incognito mode for the Finance OU."}]
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Enable Safe Browsing Enhanced Protection for the entire organization and disable incognito mode for the Finance OU.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
           },
-          "expected_agent_response": {
-            "parts": [{"text": "I'll use the Policy Automation workflow to draft and validate these two policy changes. Running Draft ↔ Validate loop.\n\nPolicy 1: SafeBrowsingProtectionLevel = 2 (Enhanced) at root OU\nPolicy 2: IncognitoModeAvailability = 1 (Disabled) at /Finance OU"}]
-          }
+          "final_response": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I'll use the Policy Automation workflow to draft and validate these two policy changes.\nPolicy 1: SafeBrowsingProtectionLevel = 2 at root OU\nPolicy 2: IncognitoModeAvailability = 1 at /Finance OU",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": null,
+          "creation_timestamp": 0.0,
+          "rubrics": null,
+          "app_details": null
         }
       ],
-      "creation_timestamp": 1780460011.0
+      "conversation_scenario": null,
+      "session_input": null,
+      "creation_timestamp": 1780473384.880532,
+      "rubrics": null,
+      "final_session_state": {}
     },
     {
       "eval_id": "routes_to_security_posture",
       "conversation": [
         {
+          "invocation_id": "",
           "user_content": {
-            "parts": [{"text": "We need a compliance review before our SOC2 audit next month. Check our Chrome fleet DLP and extension policies."}]
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "We need a compliance review before our SOC2 audit next month. Check our Chrome fleet DLP and extension policies.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
           },
-          "expected_agent_response": {
-            "parts": [{"text": "I'll run the Security Posture workflow which performs DLP, Extension, and Compliance audits concurrently. This will check your configuration against CIS benchmarks and enterprise security baselines."}]
-          }
+          "final_response": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I'll run the Security Posture workflow which performs DLP, Extension, and Compliance audits concurrently.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": null,
+          "creation_timestamp": 0.0,
+          "rubrics": null,
+          "app_details": null
         }
       ],
-      "creation_timestamp": 1780460012.0
+      "conversation_scenario": null,
+      "session_input": null,
+      "creation_timestamp": 1780473384.8805451,
+      "rubrics": null,
+      "final_session_state": {}
     },
     {
       "eval_id": "routes_to_enrollment_skill",
       "conversation": [
         {
+          "invocation_id": "",
           "user_content": {
-            "parts": [{"text": "What are the steps to set up Chrome Browser Cloud Management on Windows laptops?"}]
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "What are the steps to set up Chrome Browser Cloud Management on Windows laptops?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
           },
-          "expected_agent_response": {
-            "parts": [{"text": "For Chrome Browser Cloud Management (CBCM) on Windows:\n\n1. Admin Console → Devices → Chrome → Managed Browsers\n2. Generate enrollment token: Settings → Enrollment Token\n3. Deploy via Windows Registry key CloudManagementEnrollmentToken\n4. Chrome auto-enrolls on next launch\n5. Verify in Admin Console under Managed Browsers"}]
-          }
+          "final_response": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "For Chrome Browser Cloud Management on Windows:\n1. Admin Console, Devices, Chrome, Managed Browsers\n2. Generate enrollment token\n3. Deploy via Windows Registry key CloudManagementEnrollmentToken\n4. Chrome auto-enrolls on next launch",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": null,
+          "creation_timestamp": 0.0,
+          "rubrics": null,
+          "app_details": null
         }
       ],
-      "creation_timestamp": 1780460013.0
+      "conversation_scenario": null,
+      "session_input": null,
+      "creation_timestamp": 1780473384.8805592,
+      "rubrics": null,
+      "final_session_state": {}
     },
     {
       "eval_id": "routes_to_runbook_creator",
       "conversation": [
         {
+          "invocation_id": "",
           "user_content": {
-            "parts": [{"text": "Create a runbook for our team's quarterly Chrome extension audit process."}]
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Create a runbook for our team's quarterly Chrome extension audit process.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
           },
-          "expected_agent_response": {
-            "parts": [{"text": "I'll use the runbook-creator skill to generate a structured operational runbook for your quarterly Chrome extension audit. The runbook will include prerequisites, step-by-step procedures, validation checks, and escalation paths."}]
-          }
+          "final_response": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I'll use the runbook-creator skill to generate a structured operational runbook for your quarterly Chrome extension audit.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": null,
+          "creation_timestamp": 0.0,
+          "rubrics": null,
+          "app_details": null
         }
       ],
-      "creation_timestamp": 1780460014.0
+      "conversation_scenario": null,
+      "session_input": null,
+      "creation_timestamp": 1780473384.8805718,
+      "rubrics": null,
+      "final_session_state": {}
     },
     {
       "eval_id": "direct_response_simple",
       "conversation": [
         {
+          "invocation_id": "",
           "user_content": {
-            "parts": [{"text": "How many workflows do you support?"}]
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "How many workflows do you support?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
           },
-          "expected_agent_response": {
-            "parts": [{"text": "I support 3 main workflows and 4 knowledge skills:\n\n1. Support Intake (Sequential) — Triage, diagnose, and resolve Chrome/ChromeOS issues\n2. Policy Automation (Loop) — Draft and validate policy changes iteratively\n3. Security Posture (Parallel) — Run DLP, extension, and compliance audits concurrently\n\nPlus 4 skills: chrome-policy-quick-ref, chrome-policy-reference, enrollment-playbook, and runbook-creator."}]
-          }
+          "final_response": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I support 3 main workflows and 4 knowledge skills:\n1. Support Intake (Sequential)\n2. Policy Automation (Loop)\n3. Security Posture (Parallel)\nPlus 4 skills: chrome-policy-quick-ref, chrome-policy-reference, enrollment-playbook, and runbook-creator.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": null,
+          "creation_timestamp": 0.0,
+          "rubrics": null,
+          "app_details": null
         }
       ],
-      "creation_timestamp": 1780460015.0
+      "conversation_scenario": null,
+      "session_input": null,
+      "creation_timestamp": 1780473384.880585,
+      "rubrics": null,
+      "final_session_state": {}
     }
   ],
-  "creation_timestamp": 1780460010.0
+  "creation_timestamp": 1780473384.880587
 }

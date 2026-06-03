@@ -1,91 +1,362 @@
 {
   "eval_set_id": "response_quality",
   "name": "Response Quality Evaluations",
+  "description": null,
   "eval_cases": [
     {
       "eval_id": "routing_lists_capabilities",
       "conversation": [
         {
+          "invocation_id": "",
           "user_content": {
-            "parts": [{"text": "What can you help me with? List all your capabilities."}]
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "What can you help me with? List all your capabilities.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
           },
-          "expected_agent_response": {
-            "parts": [{"text": "I can help with Chrome Browser and ChromeOS fleet management through these workflows:\n\n1. **Support Intake** (Sequential) — Triage → Diagnose → Resolve issues with enrollment, policy, extensions\n2. **Policy Automation** (Loop) — Draft and validate Chrome/ChromeOS policy changes with automated security checks\n3. **Security Posture** (Parallel) — Run concurrent DLP, extension, and compliance audits\n4. **Knowledge Skills** — Policy reference, enrollment playbook, runbook creation"}]
-          }
+          "final_response": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I can help with Chrome Browser and ChromeOS fleet management through these workflows:\n\n1. **Support Intake** (Sequential) — Triage, Diagnose, Resolve issues with enrollment, policy, extensions\n2. **Policy Automation** (Loop) — Draft and validate Chrome/ChromeOS policy changes with automated security checks\n3. **Security Posture** (Parallel) — Run concurrent DLP, extension, and compliance audits\n4. **Knowledge Skills** — Policy reference, enrollment playbook, runbook creation",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": null,
+          "creation_timestamp": 0.0,
+          "rubrics": null,
+          "app_details": null
         }
       ],
-      "creation_timestamp": 1780460000.0
+      "conversation_scenario": null,
+      "session_input": null,
+      "creation_timestamp": 1780473384.8798468,
+      "rubrics": null,
+      "final_session_state": {}
     },
     {
       "eval_id": "support_intake_enrollment",
       "conversation": [
         {
+          "invocation_id": "",
           "user_content": {
-            "parts": [{"text": "Our Chromebooks in the Engineering OU aren't enrolling after a powerwash. They show 'This device is not managed' at the OOBE screen. About 15 devices affected."}]
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Our Chromebooks in the Engineering OU aren't enrolling after a powerwash. They show 'This device is not managed' at the OOBE screen. About 15 devices affected.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
           },
-          "expected_agent_response": {
-            "parts": [{"text": "I'll route this to the Support Intake workflow to triage, diagnose, and resolve.\n\n**Triage**: Category: ENROLLMENT, Priority: P2 (team-wide, 15 devices), Device: ChromeOS\n\n**Diagnosis**: The most likely cause is that ForceReenrollment was not enabled for the Engineering OU before the powerwash. Check:\n1. Admin Console → Devices → Chrome → Settings → Enrollment\n2. Verify ForceReenrollment is set to 'Force device to re-enroll' for /Engineering OU\n3. Verify device serials exist in Admin Console → Devices\n\n**Resolution**: Enable ForceReenrollment at the Engineering OU, then powerwash the devices again. They should auto-enroll on next boot."}]
-          }
+          "final_response": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I'll route this to the Support Intake workflow to triage, diagnose, and resolve.\n\nTriage: Category ENROLLMENT, Priority P2 (team-wide, 15 devices)\n\nDiagnosis: The most likely cause is that ForceReenrollment was not enabled for the Engineering OU before the powerwash.\n\nResolution: Enable ForceReenrollment at the Engineering OU, then powerwash the devices again.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": null,
+          "creation_timestamp": 0.0,
+          "rubrics": null,
+          "app_details": null
         }
       ],
-      "creation_timestamp": 1780460001.0
+      "conversation_scenario": null,
+      "session_input": null,
+      "creation_timestamp": 1780473384.879863,
+      "rubrics": null,
+      "final_session_state": {}
     },
     {
       "eval_id": "policy_automation_block_accounts",
       "conversation": [
         {
+          "invocation_id": "",
           "user_content": {
-            "parts": [{"text": "Block personal Google accounts on all managed Chrome browsers in the Sales OU."}]
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Block personal Google accounts on all managed Chrome browsers in the Sales OU.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
           },
-          "expected_agent_response": {
-            "parts": [{"text": "I'll use the Policy Automation workflow to draft and validate this change.\n\n**Policy Draft**:\nPolicy: BrowserSignin\nValue: 2 (forced managed account)\nScope: User-level\nOU Path: /Sales\n\nPolicy: RestrictSigninToPattern\nValue: *@yourdomain.com\nScope: User-level\nOU Path: /Sales\n\n**Validation**: Schema PASS, Scope PASS, Security PASS (strengthens access control), Blast Radius MEDIUM\n\n**APPROVED** — This configuration forces sign-in with managed accounts only and blocks personal accounts."}]
-          }
+          "final_response": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I'll use the Policy Automation workflow to draft and validate this change.\n\nPolicy Draft:\nPolicy: BrowserSignin, Value: 2 (forced managed account), Scope: User-level, OU: /Sales\nPolicy: RestrictSigninToPattern, Value: *@yourdomain.com, Scope: User-level, OU: /Sales\n\nValidation: APPROVED",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": null,
+          "creation_timestamp": 0.0,
+          "rubrics": null,
+          "app_details": null
         }
       ],
-      "creation_timestamp": 1780460002.0
+      "conversation_scenario": null,
+      "session_input": null,
+      "creation_timestamp": 1780473384.879877,
+      "rubrics": null,
+      "final_session_state": {}
     },
     {
       "eval_id": "security_audit_full",
       "conversation": [
         {
+          "invocation_id": "",
           "user_content": {
-            "parts": [{"text": "Run a full security audit on our Chrome fleet configuration."}]
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Run a full security audit on our Chrome fleet configuration.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
           },
-          "expected_agent_response": {
-            "parts": [{"text": "I'll run the Security Posture workflow which performs three concurrent audits:\n\n**DLP Audit**: Checking clipboard control, screenshot policy, printing restrictions, external storage, download restrictions, sync policies.\n\n**Extension Audit**: Checking default blocklist posture, allowlist hygiene, force-installed extensions, permission scoping, update sources.\n\n**Compliance Scan**: Checking CIS Chrome Benchmark controls, Safe Browsing level, password manager policy, managed browser enrollment, cloud reporting."}]
-          }
+          "final_response": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I'll run the Security Posture workflow which performs three concurrent audits:\n\nDLP Audit: Checking clipboard, screenshot, printing, USB, download, sync policies.\nExtension Audit: Checking blocklist, allowlist, force-install, permissions.\nCompliance Scan: CIS Chrome Benchmark controls, Safe Browsing, managed enrollment.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": null,
+          "creation_timestamp": 0.0,
+          "rubrics": null,
+          "app_details": null
         }
       ],
-      "creation_timestamp": 1780460003.0
+      "conversation_scenario": null,
+      "session_input": null,
+      "creation_timestamp": 1780473384.879889,
+      "rubrics": null,
+      "final_session_state": {}
     },
     {
       "eval_id": "skill_enrollment_procedure",
       "conversation": [
         {
+          "invocation_id": "",
           "user_content": {
-            "parts": [{"text": "How do I set up zero-touch enrollment for new Chromebooks?"}]
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "How do I set up zero-touch enrollment for new Chromebooks?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
           },
-          "expected_agent_response": {
-            "parts": [{"text": "Zero-touch enrollment for new Chromebooks:\n\n1. Purchase devices through an authorized reseller\n2. Reseller registers device serials with your Google Admin Console\n3. Devices appear in: Admin Console → Devices → Chrome → Provisioning\n4. Assign the target Organizational Unit for auto-provisioned devices\n5. On first boot, device automatically enrolls without user interaction\n\nNo enrollment token or manual steps needed — devices enroll as soon as they connect to the internet."}]
-          }
+          "final_response": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Zero-touch enrollment for new Chromebooks:\n1. Purchase devices through an authorized reseller\n2. Reseller registers device serials with your Google Admin Console\n3. Devices appear in Admin Console, Devices, Chrome, Provisioning\n4. Assign the target OU for auto-provisioned devices\n5. On first boot, device automatically enrolls without user interaction",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": null,
+          "creation_timestamp": 0.0,
+          "rubrics": null,
+          "app_details": null
         }
       ],
-      "creation_timestamp": 1780460004.0
+      "conversation_scenario": null,
+      "session_input": null,
+      "creation_timestamp": 1780473384.879901,
+      "rubrics": null,
+      "final_session_state": {}
     },
     {
       "eval_id": "skill_policy_lookup",
       "conversation": [
         {
+          "invocation_id": "",
           "user_content": {
-            "parts": [{"text": "What policy controls whether USB storage is allowed on ChromeOS devices?"}]
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "What policy controls whether USB storage is allowed on ChromeOS devices?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
           },
-          "expected_agent_response": {
-            "parts": [{"text": "The policy is **ExternalStorageDisabled**.\n\n- **Type**: Boolean\n- **Values**: true (USB blocked) | false (USB allowed)\n- **Scope**: Device-level\n- **Platform**: ChromeOS only\n\nSet to `true` to block USB/external storage access on managed Chromebooks. Apply at the OU level where you want the restriction."}]
-          }
+          "final_response": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "The policy is ExternalStorageDisabled.\nType: Boolean\nValues: true (USB blocked) | false (USB allowed)\nScope: Device-level\nPlatform: ChromeOS only",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": null,
+          "creation_timestamp": 0.0,
+          "rubrics": null,
+          "app_details": null
         }
       ],
-      "creation_timestamp": 1780460005.0
+      "conversation_scenario": null,
+      "session_input": null,
+      "creation_timestamp": 1780473384.879912,
+      "rubrics": null,
+      "final_session_state": {}
     }
   ],
-  "creation_timestamp": 1780460000.0
+  "creation_timestamp": 1780473384.8799129
 }
