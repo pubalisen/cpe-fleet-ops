@@ -39,7 +39,7 @@ from google.adk.agents.parallel_agent import ParallelAgent
 from google.adk.agents.loop_agent import LoopAgent
 from google.adk.skills import load_skill_from_dir, models
 from google.adk.tools.skill_toolset import SkillToolset
-from google.adk.tools import VertexAiSearchTool
+
 
 
 # =============================================================================
@@ -151,14 +151,7 @@ skill_toolset = SkillToolset(
     ]
 )
 
-# ── RAG Tool: Vertex AI Search — Chrome Enterprise Knowledge Base ───────────
-# Data store indexed on:
-#   - support.google.com/chrome/a/*  (Chrome Enterprise Admin Help Center)
-#   - chromeenterprise.google/*      (Chrome Enterprise product pages)
-#   - support.google.com/chromebook/* (Chromebook support articles)
-kb_search_tool = VertexAiSearchTool(
-    data_store_id="projects/mygenerativeai/locations/global/collections/default_collection/dataStores/chrome-enterprise-kb",
-)
+
 
 
 # =============================================================================
@@ -477,24 +470,20 @@ root_agent = LlmAgent(
         "- Compliance check\n"
         "This runs: DLP + Extension + Compliance checks concurrently.\n"
         "Example: 'Run a security audit on our Chrome fleet configuration'\n\n"
-        "### 4. Knowledge (Skills + RAG)\n"
+        "### 4. Knowledge (Skills)\n"
         "Use skills directly for REFERENCE or HOW-TO questions:\n"
         "- `chrome-policy-quick-ref`: Policy names, values, scopes\n"
         "- `chrome-policy-reference`: Detailed policy documentation\n"
         "- `enrollment-playbook`: Step-by-step enrollment procedures\n"
-        "- `runbook-creator`: Generate new operational runbooks\n"
-        "- `kb_search_tool`: Search Chrome Enterprise knowledge base for\n"
-        "  detailed docs, release notes, and troubleshooting guides\n\n"
+        "- `runbook-creator`: Generate new operational runbooks\n\n"
         "## Routing Rules\n"
         "1. Problem/error/broken/not working → support_intake\n"
         "2. Configure/enable/disable/block/allow → policy_validation_loop\n"
         "3. Audit/security/compliance/review/DLP → security_posture_check\n"
-        "4. How-to/reference/procedure/what is → use skills or kb_search_tool\n"
-        "5. Detailed docs / release notes / troubleshooting → kb_search_tool\n"
-        "6. Simple questions about capabilities → respond directly\n\n"
-        "Always explain which workflow you're using and why.\n"
-        "When using kb_search_tool, cite the source URL from the results."
+        "4. How-to/reference/procedure/what is → use skills directly\n"
+        "5. Simple questions about capabilities → respond directly\n\n"
+        "Always explain which workflow you're using and why."
     ),
-    tools=[skill_toolset, kb_search_tool],
+    tools=[skill_toolset],
     sub_agents=[support_intake, policy_validation_loop, security_posture],
 )
